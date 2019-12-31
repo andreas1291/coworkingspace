@@ -1,5 +1,6 @@
 import React from 'react';
 import { StaticPage, TopbarContainer } from '../../containers';
+import { injectIntl, intlShape, FormattedMessage } from '../../util/reactIntl';
 import {
   Subscription,
   LayoutSingleColumn,
@@ -12,11 +13,12 @@ import {
 
 import css from './SubscriptionPage.css';
 
-const SubscriptionPage = () => {
+const SubscriptionPage = (props) => {
   // const { siteTwitterHandle, siteFacebookPage } = config;
   // const siteTwitterPage = twitterPageURL(siteTwitterHandle);
 
   // prettier-ignore
+  const { intl } = props;
   return (
     <StaticPage
       title="Contact | Book a coworkingspace everywhere"
@@ -33,8 +35,8 @@ const SubscriptionPage = () => {
         </LayoutWrapperTopbar>
 
         <LayoutWrapperMain className={css.staticPageWrapper}>
-          <h1 className={css.pageTitle}>Increase your marketing activities with our marketing-plans and become more successful. </h1>
-          <p className={css.text}> We help you to generate more traffic and bookings for your coworkingspaces. </p>
+          <h1 className={css.pageTitle}>{ intl.formatMessage({ id: "SubscriptionPage.pageTitle" }) } </h1>
+          <p className={css.text}> { intl.formatMessage({ id: "SubscriptionPage.pageSubTitle" }) }</p>
           <div className={css.contentWrapper}>
             <Subscription />
           </div>
@@ -49,5 +51,5 @@ const SubscriptionPage = () => {
   );
 };
 
-export default SubscriptionPage;
+export default injectIntl(SubscriptionPage);
 

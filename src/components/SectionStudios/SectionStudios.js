@@ -134,7 +134,9 @@ const ListingItem = props => {
       <div className={css.imageWrapper}>
         <div className={css.aspectWrapper} id="wrapperAspect">
           <LazyImage src={image} alt={name} className={css.locationImage} />
-          <span className={css.reply}>Quick replies</span>
+          <span className={css.reply}>
+            <FormattedMessage id="SectionStudios.quickReplies" />
+          </span>
         </div>
         <div className={css.linkText} id="textLink">
           <div className={css.listingDetailInfo}>

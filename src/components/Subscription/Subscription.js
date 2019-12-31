@@ -1,8 +1,8 @@
 
 import React, { Component} from 'react';
 import classNames from 'classnames';
-import { injectIntl, intlShape } from '../../util/reactIntl';
-import { FormattedMessage } from '../../util/reactIntl';
+import { injectIntl, intlShape, FormattedMessage } from '../../util/reactIntl';
+
 import { bool } from 'prop-types';
 import NamedLink from '../NamedLink/NamedLink';
 import { PrimaryButton } from '../Button/Button';
@@ -114,7 +114,7 @@ const tabContents = [
 ]
 
 const TabButton = props => {
-  const { className, label, active, handleChange, number } = props;
+  const { className, label, active, handleChange, number, intl } = props;
   const classes=classNames(css.tabButton, active?css.active:'')
 
   return (
@@ -151,22 +151,22 @@ const TabContentBoard = props => {
 }
 
 const TabContent = props => {
-  const { className, active, price, billingMethod, listings, buttonLabel, routeName, info, contentPanelIndex,contentIndex  } = props;
+  const { className, active, price, billingMethod, listings, buttonLabel, routeName, info, contentPanelIndex,contentIndex, intl  } = props;
   const classes=classNames(css.tabContent, active?css.active:'')
   return (
     <div className={classes}>
       <span className={css.billingMethod}>
         {intl.formatMessage({ id: `SubscriptionPage.${billingMethod}` })}
       </span>
-      <span className={css.priceLabel}><span className={css.price}>${price}</span> /month</span>
+  <span className={css.priceLabel}><span className={css.price}>${price}</span> / {intl.formatMessage({id: "SubscriptionPage.month"})}</span>
       <div className={css.listingBoard}>
         {
           listings.map((listing, index) => {
             const { one, two } = listing;
             return (
-              <div key={index} className={css.listing}>&#10004; 
-                <span className={css.one}>{intl.formatMessage({ id: `SubscriptionPage.${contentPanelIndex?"annualBilling":"monthlyBilling"}.${billingMethod}${contentIndex}` })}</span>
-                {intl.formatMessage({ id: `SubscriptionPage.${contentPanelIndex?"annualBilling":"monthlyBilling"}.${billingMethod}${contentIndex}.caption` })}
+              <div key={index} className={css.listing}>&#10004;
+                <span className={css.one}>{intl.formatMessage({ id: `SubscriptionPage.${contentPanelIndex?"annualBilling":"monthlyBilling"}.${billingMethod}${index + 1}` })}</span>
+                {intl.formatMessage({ id: `SubscriptionPage.${contentPanelIndex?"annualBilling":"monthlyBilling"}.${billingMethod}${index + 1}.caption` })}
               </div>
             )
           })
@@ -208,11 +208,12 @@ class Subscription extends Component {
     const active1=this.state.showAry[0];
     const active2=this.state.showAry[1];
     const active3=this.state.showAry[2];
+    const { intl } = this.props
     return (
       <div className={css.board}>
         <TabBTPanel>
-          <TabButton number={0} label={"monthlyBilling"} active={active1} handleChange={this.handleChange}/>
-          <TabButton number={1} label={"annualBilling"} active={active2} handleChange={this.handleChange}/>
+          <TabButton intl={intl} number={0} label={"monthlyBilling"} active={active1} handleChange={this.handleChange}/>
+          <TabButton intl={intl} number={1} label={"annualBilling"} active={active2} handleChange={this.handleChange}/>
           {/* <TabButton number={2} label={"Yearly billing - save 30%"} active={active3} handleChange={this.handleChange}/> */}
         </TabBTPanel>
         <TabContentBoard>
@@ -220,12 +221,12 @@ class Subscription extends Component {
             tabContents.map((content, index1) => {
               const {} = content;
               return (
-                <TabContentPanel key={index1} hidden={!this.state.showAry[index1]} >
+                <TabContentPanel key={index1}  hidden={!this.state.showAry[index1]} >
                   {
                     content.map((item, index2) => {
 
                       return (
-                        <TabContent key={index2} contentIndex={index2} contentPanelIndex={index1} {...item} />
+                        <TabContent intl={intl} key={index2} contentIndex={index2} contentPanelIndex={index1} {...item} />
                       )
                     })
                   }

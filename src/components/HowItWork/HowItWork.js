@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { injectIntl, intlShape, FormattedMessage } from '../../util/reactIntl';
 import css from './HowItWork.css';
 
 
@@ -18,7 +19,7 @@ const items = [
   }
 ]
 const ContentItem = props => {
-  const { title, content, number } = props
+  const { title, content, number, intl } = props
   return (
     <div className={css.contentItem}>
      <div className={css.markContainer}>
@@ -26,9 +27,11 @@ const ContentItem = props => {
       </div>
       <div className={css.textBoard}>
         <div className={css.subtitle}>
-        	{title}
+        { intl.formatMessage({ id: `HowItWorksPage.item${number}.title` }) }
         </div>
-        <div className={css.text}>{content}</div>
+        <div className={css.text}>
+        { intl.formatMessage({ id: `HowItWorksPage.item${number}.content` }) }
+        </div>
       </div>
     </div>
   )
@@ -36,11 +39,11 @@ const ContentItem = props => {
 
 class HowItWork extends Component {
   render() {
-    const { alt, ...rest } = this.props;
+    const { alt, intl, ...rest } = this.props;
     return (
       <div className={css.mainWrapper}>
         <div className={css.title}>
-          How it Works?
+        { intl.formatMessage({ id: "HowItWorksPage.pageTitle" }) }
         </div>
         <div className={css.content}>
           <div className={css.mask}></div>
@@ -48,7 +51,7 @@ class HowItWork extends Component {
             {
               items.map((item, index) => {
                 return (
-                  <ContentItem {...item} number={index+1} key={index}/>
+                  <ContentItem {...item} intl={intl} number={index+1} key={index}/>
                 )
               })
             }
@@ -71,4 +74,4 @@ HowItWork.propTypes = {
   className: string,
 };
 
-export default HowItWork;
+export default injectIntl(HowItWork);

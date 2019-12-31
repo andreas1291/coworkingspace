@@ -18,17 +18,17 @@ import listing6 from './images/slide1.jpg';
 const locationLinksData = {
   explore: [
     {
-      name: "San Francisco",
+      name: "sanfrancisco",
       image: listing1,
       address: "?address=San%20Francisco%2C%20California%2C%20United%20States%20of%20America&bounds=37.8324430069081%2C-122.354995082683%2C37.6044780500533%2C-122.517910874663"
     },
     {
-      name: "New York",
+      name: "newyork",
       image: listing2,
       address: "?address=New%20York%20City%2C%20New%20York%2C%20United%20States%20of%20America&bounds=40.917576401307%2C-73.7008392055224%2C40.477399%2C-74.2590879797556"
     },
     {
-      name: "London",
+      name: "london",
       image: listing3,
       address: "?address=London%2C%20Greater%20London%2C%20England%2C%20United%20Kingdom&bounds=51.669993%2C0.152641%2C51.384598%2C-0.35167"
     }
@@ -36,17 +36,17 @@ const locationLinksData = {
 
   type: [
     {
-      name: "Meeting Room",
+      name: "meetingRoom",
       image: listing4,
       address: "?pub_category=meetingroom"
     },
     {
-      name: "Single Desk",
+      name: "singleDesk",
       image: listing5,
       address: "?pub_category=singledesk"
     },
     {
-      name: "Flex Desk",
+      name: "flexDesk",
       image: listing6,
       address: "?pub_category=flexdesk"
     }
@@ -62,14 +62,16 @@ class LocationImage extends Component {
 const LazyImage = lazyLoadWithDimensions(LocationImage);
 
 const ListingItem = props => {
-  const { name, image, address } = props
+  const { name, image, address, intl } = props
   return (
   <NamedLink name="SearchPage" to={{ search: address }} className={css.location}>
       <div className={css.imageWrapper}>
         <div className={css.aspectWrapper} id="wrapperAspect">
           <LazyImage src={image} alt={name} className={css.locationImage} />
           <div className={css.locationName}>
-            <span className={css.locationName}>{name}</span>
+            <span className={css.locationName}>
+              <FormattedMessage id={`SectionLocations.${name}`} />
+            </span>
           </div>
         </div>
     </div>
@@ -78,7 +80,7 @@ const ListingItem = props => {
 };
 
 const SectionLocations = props => {
-  const { rootClassName, className, flag } = props;
+  const { rootClassName, className, flag, intl } = props;
 
   const classes = classNames(rootClassName || css.root, className);
   const dataIndex = flag;
@@ -98,6 +100,7 @@ const SectionLocations = props => {
             return (
               <ListingItem
                 key={index}
+                intl={intl}
                 name={item.name}
                 image={item.image}
                 address={item.address}

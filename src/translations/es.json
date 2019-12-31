@@ -959,5 +959,85 @@
 
   "SectionLocations.listingsInLocation": "Saunas en {location}",
   "SectionLocations.title": "Descubre lugares exóticos en Finlandia",
-  "SectionStudios.title": "Espacios de coworking verificados premium"
+  "SectionStudios.title": "Espacios de coworking verificados premium",
+
+
+
+
+  "SubscriptionPage.monthlyBilling": "Facturación mensual",
+  "SubscriptionPage.annualBilling": "Facturación semestral: ahorre un 20%",
+  "SubscriptionPage.basicPlan": "Plan básico",
+  "SubscriptionPage.premiumPlan": "Plan Premium",
+
+  "SubscriptionPage.monthlyBilling.premiumPlan1": "Todas las funciones básicas",
+  "SubscriptionPage.monthlyBilling.premiumPlan2": "Premium verificado",
+  "SubscriptionPage.monthlyBilling.premiumPlan3": "Prioridad",
+  "SubscriptionPage.monthlyBilling.premiumPlan4": "Espacio de trabajo múltiple",
+  "SubscriptionPage.monthlyBilling.premiumPlan5": "Márketing",
+  "SubscriptionPage.monthlyBilling.premiumPlan6": "VIP",
+
+  "SubscriptionPage.pageTitle": "Aumente sus actividades de marketing con nuestros planes de marketing y tenga más éxito.",
+  "SubscriptionPage.pageSubTitle": "Te ayudamos a generar más tráfico y reservas para tus espacios de coworking.",
+  "SubscriptionPage.monthlyBilling.premiumPlan1.caption": " ",
+  "SubscriptionPage.monthlyBilling.premiumPlan2.caption": "Etiqueta",
+  "SubscriptionPage.monthlyBilling.premiumPlan3.caption": "Resultados de la búsqueda",
+  "SubscriptionPage.monthlyBilling.premiumPlan4.caption": "Listados",
+  "SubscriptionPage.monthlyBilling.premiumPlan5.caption": "Alcanzar",
+  "SubscriptionPage.monthlyBilling.premiumPlan6.caption": "Servicio de ayuda",
+
+
+  "SubscriptionPage.monthlyBilling.basicPlan1": "Un espacio de coworking",
+  "SubscriptionPage.monthlyBilling.basicPlan2": "Herramientas de reserva",
+  "SubscriptionPage.monthlyBilling.basicPlan3": "Mensajes de compañeros de trabajo",
+  "SubscriptionPage.monthlyBilling.basicPlan4": "Pagos seguros y pagos",
+
+  "SubscriptionPage.monthlyBilling.basicPlan1.caption": "Listado",
+  "SubscriptionPage.monthlyBilling.basicPlan2.caption": " ",
+  "SubscriptionPage.monthlyBilling.basicPlan3.caption": "Sistema",
+  "SubscriptionPage.monthlyBilling.basicPlan4.caption": " ",
+
+  "SubscriptionPage.annualBilling.premiumPlan1": "Todas las funciones básicas",
+  "SubscriptionPage.annualBilling.premiumPlan2": "Premium verificado",
+  "SubscriptionPage.annualBilling.premiumPlan3": "Priority",
+  "SubscriptionPage.annualBilling.premiumPlan4": "Espacio de trabajo múltiple",
+  "SubscriptionPage.annualBilling.premiumPlan5": "Márketing",
+  "SubscriptionPage.annualBilling.premiumPlan6": "VIP",
+
+  "SubscriptionPage.annualBilling.premiumPlan1.caption": " ",
+  "SubscriptionPage.annualBilling.premiumPlan2.caption": "Etiqueta",
+  "SubscriptionPage.annualBilling.premiumPlan3.caption": "Resultados de la búsqueda",
+  "SubscriptionPage.annualBilling.premiumPlan4.caption": "Listados",
+  "SubscriptionPage.annualBilling.premiumPlan5.caption": "Alcanzar",
+  "SubscriptionPage.annualBilling.premiumPlan6.caption": "Servicio de ayuda",
+
+
+  "SubscriptionPage.annualBilling.basicPlan1": "Un espacio de coworking",
+  "SubscriptionPage.annualBilling.basicPlan2": "Herramientas de reserva",
+  "SubscriptionPage.annualBilling.basicPlan3": "Mensajes de compañeros de trabajo",
+  "SubscriptionPage.annualBilling.basicPlan4": "Pagos seguros y pagos",
+
+  "SubscriptionPage.annualBilling.basicPlan1.caption": "Listado",
+  "SubscriptionPage.annualBilling.basicPlan2.caption": " ",
+  "SubscriptionPage.annualBilling.basicPlan3.caption": "Sistema",
+  "SubscriptionPage.annualBilling.basicPlan4.caption": " ",
+
+  "HowItWorksPage.pageTitle": "¿Cómo funciona?",
+  "HowItWorksPage.item1.title": "Descubre y elige un espacio de coworking",
+  "HowItWorksPage.item1.content": "Descubra espacios de trabajo cercanos o en algunos otros lugares del mundo. Desde el escritorio individual hasta una sala de reuniones, reserve y elija el espacio de oficina que desee. Tenemos el espacio de trabajo adecuado para cada presupuesto y cada requisito.",
+  "HowItWorksPage.item2.title": "Solicitar Coworkertime",
+  "HowItWorksPage.item2.content": "¿Tiene preguntas sobre un Coworkingspace, el equipo u otros? Use nuestro servicio de mensajería para mantenerse en contacto con el proveedor de servicios.",
+
+  "HowItWorksPage.item3.title": "Reserve y pague",
+  "HowItWorksPage.item3.content": "Programe la hora y la fecha de su espacio de trabajo y reserve y pague con unos pocos clics.",
+
+  "SectionStudios.quickReplies": "Respuestas rápidas",
+
+  "SectionLocations.sanfrancisco": "San Francisco",
+  "SectionLocations.newyork": "New York",
+  "SectionLocations.london": "London",
+  "SectionLocations.meetingRoom": "Sala de Reuniones",
+  "SectionLocations.singleDesk": "Escritorio individual",
+  "SectionLocations.flexDesk": "Escritorio Flex",
+
+  "SubscriptionPage.month":"mes"
 }
