@@ -1,6 +1,8 @@
 
 import React, { Component} from 'react';
 import classNames from 'classnames';
+import { injectIntl, intlShape } from '../../util/reactIntl';
+import { FormattedMessage } from '../../util/reactIntl';
 import { bool } from 'prop-types';
 import NamedLink from '../NamedLink/NamedLink';
 import { PrimaryButton } from '../Button/Button';
@@ -10,7 +12,7 @@ const tabContents = [
     {
       active:false,
       price:29,
-      billingMethod: "Basic Plan",
+      billingMethod: "basicPlan",
       listings:[
         { one: "One Coworkingspace", two: "Listing"},
         { one: "Booking Tools", two: ""},
@@ -25,7 +27,7 @@ const tabContents = [
     {
       active:true,
       price:199,
-      billingMethod: "Premium Plan",
+      billingMethod: "premiumPlan",
       listings:[
         { one: "All Basic Features", two: ""},
         { one: "Premium Verified", two: "Tag "},
@@ -44,7 +46,7 @@ const tabContents = [
     {
       active:false,
       price:23,
-      billingMethod: "Basic Plan",
+      billingMethod: "basicPlan",
       listings:[
         { one: "One Coworkingspace", two: "Listing"},
         { one: "Booking Tools", two: ""},
@@ -59,7 +61,7 @@ const tabContents = [
     {
       active:true,
       price:159,
-      billingMethod: "Premium Plan",
+      billingMethod: "premiumPlan",
       listings:[
         { one: "All Basic Features", two: ""},
         { one: "Premium Verified", two: "Tag "},
@@ -116,7 +118,9 @@ const TabButton = props => {
   const classes=classNames(css.tabButton, active?css.active:'')
 
   return (
-    <span className={classes} onClick={() => handleChange(number)}>{label}</span>
+    <span className={classes} onClick={() => handleChange(number)}>
+      {intl.formatMessage({ id: `SubscriptionPage.${label}` })}
+    </span>
   )
 }
 const TabBTPanel = props => {
@@ -147,18 +151,23 @@ const TabContentBoard = props => {
 }
 
 const TabContent = props => {
-  const { className, active, price, billingMethod, listings, buttonLabel, routeName, info  } = props;
+  const { className, active, price, billingMethod, listings, buttonLabel, routeName, info, contentPanelIndex,contentIndex  } = props;
   const classes=classNames(css.tabContent, active?css.active:'')
   return (
     <div className={classes}>
-      <span className={css.billingMethod}>{billingMethod}</span>
+      <span className={css.billingMethod}>
+        {intl.formatMessage({ id: `SubscriptionPage.${billingMethod}` })}
+      </span>
       <span className={css.priceLabel}><span className={css.price}>${price}</span> /month</span>
       <div className={css.listingBoard}>
         {
           listings.map((listing, index) => {
             const { one, two } = listing;
             return (
-              <div key={index} className={css.listing}>&#10004; <span className={css.one}>{one}</span>{two}</div>
+              <div key={index} className={css.listing}>&#10004; 
+                <span className={css.one}>{intl.formatMessage({ id: `SubscriptionPage.${contentPanelIndex?"annualBilling":"monthlyBilling"}.${billingMethod}${contentIndex}` })}</span>
+                {intl.formatMessage({ id: `SubscriptionPage.${contentPanelIndex?"annualBilling":"monthlyBilling"}.${billingMethod}${contentIndex}.caption` })}
+              </div>
             )
           })
         }
@@ -202,8 +211,8 @@ class Subscription extends Component {
     return (
       <div className={css.board}>
         <TabBTPanel>
-          <TabButton number={0} label={"Monthly billing"} active={active1} handleChange={this.handleChange}/>
-          <TabButton number={1} label={"Semi-annual billing - save 20%"} active={active2} handleChange={this.handleChange}/>
+          <TabButton number={0} label={"monthlyBilling"} active={active1} handleChange={this.handleChange}/>
+          <TabButton number={1} label={"annualBilling"} active={active2} handleChange={this.handleChange}/>
           {/* <TabButton number={2} label={"Yearly billing - save 30%"} active={active3} handleChange={this.handleChange}/> */}
         </TabBTPanel>
         <TabContentBoard>
@@ -216,7 +225,7 @@ class Subscription extends Component {
                     content.map((item, index2) => {
 
                       return (
-                        <TabContent key={index2} {...item} />
+                        <TabContent key={index2} contentIndex={index2} contentPanelIndex={index1} {...item} />
                       )
                     })
                   }
@@ -238,4 +247,4 @@ Subscription.propTypes = {
   showAsPopup: bool,
 };
 
-export default Subscription;
+export default injectIntl(Subscription);

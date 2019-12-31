@@ -972,5 +972,61 @@
   "UserCard.showFullBioLink": "more",
   "UserCard.viewProfileLink": "View profile",
   "UserDisplayName.banned": "Banned user",
-  "UserDisplayName.deleted": "Deleted user"
+  "UserDisplayName.deleted": "Deleted user",
+
+  "SubscriptionPage.monthlyBilling": "Monthly billing",
+  "SubscriptionPage.annualBilling": "Semi-annual billing - save 20%",
+  "SubscriptionPage.basicPlan": "Basic Plan",
+  "SubscriptionPage.premiumPlan": "Premium Plan",
+
+  "SubscriptionPage.monthlyBilling.premiumPlan1": "All Basic Features",
+  "SubscriptionPage.monthlyBilling.premiumPlan2": "premium Verified",
+  "SubscriptionPage.monthlyBilling.premiumPlan3": "Priority",
+  "SubscriptionPage.monthlyBilling.premiumPlan4": "Multiple Coworkingspace",
+  "SubscriptionPage.monthlyBilling.premiumPlan5": "Marketing",
+  "SubscriptionPage.monthlyBilling.premiumPlan6": "VIP",
+
+  "SubscriptionPage.monthlyBilling.premiumPlan1.caption": "",
+  "SubscriptionPage.monthlyBilling.premiumPlan2.caption": "Tag",
+  "SubscriptionPage.monthlyBilling.premiumPlan3.caption": "Search Results",
+  "SubscriptionPage.monthlyBilling.premiumPlan4.caption": "Listings",
+  "SubscriptionPage.monthlyBilling.premiumPlan5.caption": "Reach",
+  "SubscriptionPage.monthlyBilling.premiumPlan6.caption": "Service & Support",
+
+
+  "SubscriptionPage.monthlyBilling.basicPlan1": "One Coworkingspace",
+  "SubscriptionPage.monthlyBilling.basicPlan2": "Booking Tools",
+  "SubscriptionPage.monthlyBilling.basicPlan3": "Coworker messaging",
+  "SubscriptionPage.monthlyBilling.basicPlan4": "Secure Payments & Payouts",
+
+  "SubscriptionPage.monthlyBilling.basicPlan1.caption": "Listing",
+  "SubscriptionPage.monthlyBilling.basicPlan2.caption": "",
+  "SubscriptionPage.monthlyBilling.basicPlan3.caption": "System",
+  "SubscriptionPage.monthlyBilling.basicPlan4.caption": "",
+
+  "SubscriptionPage.annualBilling.premiumPlan1": "All Basic Features",
+  "SubscriptionPage.annualBilling.premiumPlan2": "premium Verified",
+  "SubscriptionPage.annualBilling.premiumPlan3": "Priority",
+  "SubscriptionPage.annualBilling.premiumPlan4": "Multiple Coworkingspace",
+  "SubscriptionPage.annualBilling.premiumPlan5": "Marketing",
+  "SubscriptionPage.annualBilling.premiumPlan6": "VIP",
+
+  "SubscriptionPage.annualBilling.premiumPlan1.caption": "",
+  "SubscriptionPage.annualBilling.premiumPlan2.caption": "Tag",
+  "SubscriptionPage.annualBilling.premiumPlan3.caption": "Search Results",
+  "SubscriptionPage.annualBilling.premiumPlan4.caption": "Listings",
+  "SubscriptionPage.annualBilling.premiumPlan5.caption": "Reach",
+  "SubscriptionPage.annualBilling.premiumPlan6.caption": "Service & Support",
+
+
+  "SubscriptionPage.annualBilling.basicPlan1": "One Coworkingspace",
+  "SubscriptionPage.annualBilling.basicPlan2": "Booking Tools",
+  "SubscriptionPage.annualBilling.basicPlan3": "Coworker messaging",
+  "SubscriptionPage.annualBilling.basicPlan4": "Secure Payments & Payouts",
+
+  "SubscriptionPage.annualBilling.basicPlan1.caption": "Listing",
+  "SubscriptionPage.annualBilling.basicPlan2.caption": "",
+  "SubscriptionPage.annualBilling.basicPlan3.caption": "System",
+  "SubscriptionPage.annualBilling.basicPlan4.caption": "",
+  
 }
