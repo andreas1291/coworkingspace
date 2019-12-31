@@ -3,7 +3,7 @@
   "description": "Sharetribe Flex Template Demo - Saunatime!",
   "keywords": [
     "node", 
-    "react"
+    "react" 
   ],
   "repository": "https://github.com/sharetribe/flex-template-web/",
   "env": {
