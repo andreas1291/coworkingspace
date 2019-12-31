@@ -1,0 +1,125 @@
+.board{
+  padding: 5%;
+  width: 100% !important;
+}
+
+.tabButton{
+  display: block;
+  cursor: pointer;
+  border-bottom: 1px solid  black;
+  padding: 8px 0px;
+  &:hover{
+    border-bottom: none;
+    padding: 10px 0px;
+  }
+
+}
+
+.tabButton.active{
+  border-bottom: 3px solid black;
+  padding: 10px 0px;
+  cursor: auto;
+}
+
+.tabBTPanel{
+  display: flex;
+  flex-direction: row;
+  -webkit-justify-content: center; /* Safari 6.1+ */
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+.tabContentPanel{
+  display: flex;
+
+  justify-content: space-around;
+}
+.tabBoard{
+
+}
+.tabContent{
+  min-width: 40%;
+  padding: 30px 30px 10px 30px;
+  border: 1px solid #e7e7e7;
+
+
+}
+
+.tabContent.active{
+  border: 6px solid #c4a03e;
+}
+
+.tabContent.active button{
+  background: #c4a03e;
+  color: white;
+  font-size: 13px;
+  &:hover{
+    box-shadow: 0px 2px 3px #e7e7e7;
+    background: #c4a03e;
+    border: 1px solid #c4a03e;
+  }
+}
+
+.billingMethod{
+  display: block;
+  font-size: 23px;
+  font-weight: bold;
+  margin: 10px 10px 20px 10px;
+}
+.price{
+  font-size: 26px;
+  font-weight: bolder;
+}
+
+.priceLabel{
+  display: block;
+  font-size: 23px;
+  font-weight: normal;
+  margin: 10px;
+}
+
+.listingBoard{
+  padding: 14px;
+  min-height: 283px;
+}
+.listing{
+  margin: 10px 0px;
+}
+
+.buttonBoard{
+  margin: auto;
+  width: 90%;
+}
+
+.buttonBoard a{
+  text-decoration: none !important;
+}
+
+.buttonBoard a button{
+  background:white;
+  color:black;
+  border: 1px solid #e7e7e7;
+  border-radius:2px;
+  font-size: 13px;
+  &:hover{
+    box-shadow: 0px 2px 3px #e7e7e7;
+    background:white;
+    border: 1px solid #e7e7e7;
+  }
+}
+
+.infoBoard{
+  text-align: center;
+  margin: auto;
+  width: 40%;
+}
+
+.info{
+  font-size: 15px;
+  color:#828282;
+}
+
+.one{
+  font-size: 18px;
+  font-weight: bolder;
+  margin: 10px;
+}

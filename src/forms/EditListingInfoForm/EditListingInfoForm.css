@@ -1,0 +1,142 @@
+@import '../../marketplace.css';
+
+.root {
+  /* Dimensions */
+  width: 100%;
+  height: auto;
+
+  /* Layout */
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+
+  padding-top: 1px;
+}
+
+.title {
+  margin-bottom: 24px;
+}
+
+.error {
+  color: var(--failColor);
+}
+
+.calendarWrapper {
+  flex-grow: 1;
+  position: relative;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.submitButton {
+  margin-top: auto;
+  margin-bottom: 24px;
+  flex-shrink: 0;
+}
+
+@media (--viewportMedium) {
+  .root {
+    padding-top: 2px;
+    margin-top: -16px;
+  }
+  .title {
+    margin-bottom: 32px;
+  }
+}
+
+@media (--viewportLarge) {
+  .calendarWrapper {
+    flex-grow: 0;
+    margin-bottom: 24px;
+  }
+  .submitButton {
+    display: inline-block;
+    width: 241px;
+    margin-top: 86px;
+  }
+}
+.timeRange{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 40px;
+}
+.inputsWrapperEx{
+  display: flex;
+  justify-content: space-between;
+  margin: auto 20px;
+}
+
+.seperator{
+  margin: 4px 8px 0 8px;
+}
+
+.timeRangeInfoPanel .SecondTimeSlotLabel{
+  margin-top: 10px;
+    margin-right: 15%;
+    width: 40%;
+    float: right;
+    font-size: 0.7rem;
+    line-height: 15px;
+    font-weight: lighter;
+    opacity: 0.9;
+}
+
+.timeRangeInfoPanel .DisabledEditable{
+  margin-top: -3%;
+  float: right;
+  font-size: 0.8rem;
+  line-height: 15px;
+  font-weight: bolder;
+  opacity: 0.9;
+}
+
+.contentWrapper .label{
+  font-size: .9rem;
+  margin-bottom: 30px;
+  display: block;
+}
+
+
+.close {
+  @apply --marketplaceModalCloseStyles;
+  padding: 0px;
+  position: relative;
+  margin-left: 10px;
+}
+
+
+.closeLight {
+  color: var(--matterColorAnti);
+  transition: var(--transitionStyleButton);
+
+  &:enabled:hover,
+  &:enabled:active {
+    color: var(--matterColorLight);
+  }
+}
+
+.oneDayTimeSlot{
+  display: flex;
+  max-width: 520px;
+  justify-content: flex-start;
+  margin: 10px auto;
+}
+
+.disabled{
+  opacity: .5;
+}
+
+.addTimeSlot{
+  width: 20px;
+  cursor: pointer;
+}
+
+.weekday{
+  display: inline-block;
+  min-width: 50px;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: -5px;
+}

@@ -1,0 +1,98 @@
+.mainWrapper{
+ margin: 50px auto;
+
+}
+.title{
+  font-size: 30px;
+  font-weight: 600;
+}
+.mask{
+  position: absolute;
+  width:100%;
+  height: 100%;
+  background: rgba(0,0,0, .2)
+}
+
+.content{
+  position: relative;
+  margin-top: 40px;
+  font-size: 13px;
+  display: flex;
+  background-image: url('./images/bg2.jpg');
+  background-size: 100%;
+
+  @media (max-width: 767px) {
+    background-size: auto 100%;
+  }
+}
+.contentBoard{
+  margin-right: 30px;
+  color: white;
+  padding: 30px 50px;
+  z-index: 1;
+  @media (max-width: 595px) {
+    padding: 20px 20px 20px 30px;
+    margin-right: 10px;
+  }
+}
+
+.started{
+
+}
+
+.imageBoard{
+
+}
+
+.image{
+
+}
+
+.contentItem{
+  display: flex;
+  margin: 20px 0px;
+}
+
+.mark{
+  border-radius: 20px;
+  background: white;
+  color: black;
+  padding: 7px 16px;
+  font-size: 14px;
+  font-weight: bolder;
+  @media (max-width: 767px) {
+    padding: 2px 10px;
+  }
+}
+
+.textBoard{
+
+}
+
+.subtitle{
+  font-size: 17px;
+  font-weight: 600;
+  color:white;
+}
+
+.text{
+  line-height: 1.4;
+  margin-top: 10px;
+  width: 50%;
+  @media(max-width: 959px){
+    width: 100%;
+  }
+}
+
+.markContainer{
+  margin-right: 10px;
+}
+
+.started{
+  background:black;
+  color:white;
+  border-radius: 5px;
+  border-color:transparent;
+  padding: 5px 20px;
+  margin: 10px 35px;
+}

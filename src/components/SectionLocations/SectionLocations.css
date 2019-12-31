@@ -1,0 +1,239 @@
+@import '../../marketplace.css';
+
+.title {
+  @apply --marketplaceH1FontStyles;
+
+  margin-top: 0;
+  /* text-align: center; */
+  max-width: 100%;
+
+  @media (--viewportMedium) {
+    /* margin-bottom: 23px; */
+  }
+  font-size: 30px;
+  margin-bottom: 0px;
+  @media(max-width: 525px){
+    font-size: 25px;
+  }
+}
+
+.locations {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+
+  @media (--viewportMedium) {
+    flex-direction: row;
+    margin-top: 57px;
+  }
+}
+
+.location {
+  width: 100%;
+  margin-top: 25px;
+
+  /* Remove link's hover effect */
+  &:hover {
+    text-decoration: none;
+  }
+
+  @media (--viewportMedium) {
+    margin-top: 0;
+  }
+}
+
+.location {
+  @media (--viewportMedium) {
+    margin-right: 40px;
+    margin-bottom: 0;
+  }
+}
+
+.location:last-of-type {
+  @media (--viewportMedium) {
+    margin-right: 0;
+  }
+}
+
+/* A wrapper for a responsive image that holds it's aspect ratio */
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 4px;
+  transition: var(--transitionStyleButton);
+}
+
+.location:hover {
+  transform: scale(1.03);
+  box-shadow: none !important;
+}
+
+
+/* An image wrapper that defines the images aspect ratio */
+.aspectWrapper {
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  /* padding-bottom: calc(6 / 13 * 100%); */
+  /* 13:6 Aspect Ratio */
+  height: 200px;
+  @media (--viewportMedium) {
+    /* padding-bottom: calc(2 / 3 * 100%); */
+    /* 3:2 Aspect Ratio */
+  }
+}
+
+.locationImage {
+  /* Layout - image will take space defined by aspect ratio wrapper */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.linkText {
+  @apply --marketplaceH2FontStyles;
+  color: var(--matterColor);
+  margin-top: 15px;
+  margin-bottom: 0;
+
+  @media (--viewportMedium) {
+    margin-top: 21px;
+  }
+}
+
+span.locationName {
+  color: var(--marketplaceColor);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin: auto;
+  display: block;
+  width: 90%;
+  text-align: center;
+}
+
+div.locationName {
+  position: absolute;
+  top:40%;
+  width: 100%;
+
+}
+
+.linkText {
+  /* box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1); */
+  padding: 16px 10px;
+  /* border-bottom-left-radius: 3px; */
+  /* border-bottom-right-radius: 3px; */
+  margin: 0 !important;
+  text-align: center;
+  background: #fcfcfc;
+}
+
+.aspectWrapper {
+  background: linear-gradient(-45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.aspectWrapper:hover {
+  background: linear-gradient(-45deg, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0));
+}
+
+.aspectWrapper img {
+  z-index: -1;
+}
+
+.linkText span {
+  color: #000000;
+}
+
+.location {
+  position: relative;
+}
+
+.premium {
+  color:white;
+  background:#c4a03e;
+  padding: 4px 8px;
+  border-radius: 3px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 12px;
+  margin-right: 5px;
+}
+
+.verified {
+  color:#c4a03e;
+  /* background:#c4a03e; */
+  padding: 4px 8px;
+  border-radius: 3px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 12px;
+  margin-right: 5px;
+}
+
+.listingDetailInfo{
+  display: flex;
+  flex-direction: row;
+  margin: 5px auto;
+}
+
+.price{
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px;
+  margin-right: 20px;
+}
+.priceAmount{
+  font-size: 20px;
+  color:gray;
+  height: 20px;
+  line-height: 20px;
+}
+.priceUnit{
+  font-size: 15px;
+  line-height: 15px;
+}
+
+.studioMark{
+  font-size: 20px;
+  text-align: left;
+  line-height: 20px;
+}
+.markPoint{
+  font-size: 10px;
+  font-weight: bold;
+  color:gray;
+}
+
+.seperator{
+  font-size: 25px;
+  font-weight: bold;
+  color:gray;
+  margin: 5px;
+}
+
+.bookingNumber{
+  font-size: 13px;
+  font-weight: bold;
+  color:gray;
+}
+
+.reply{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 3px 15px;
+  background:white;
+  border-radius: 3px;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
