@@ -19,9 +19,9 @@ const tabContents = [
         { one: "Coworker messaging", two: "System"},
         { one: "Secure Payments & Payouts", two: ""},
       ],
-      buttonLabel: "GET BASIC",
+      buttonLabel: "getbasic",
       routeName: "PayoutPreferencesPage",
-      info: "Billed monthly"
+      info: "billedmonthly"
 
     },
     {
@@ -36,9 +36,9 @@ const tabContents = [
         { one: "Marketing ", two: "Reach"},
         { one: "VIP ", two: "Service & Support"},
       ],
-      buttonLabel: "GET PREMIUM",
+      buttonLabel: "getpremium",
       routeName: "PayoutPreferencesPage",
-      info: "Billed monthly"
+      info: "billedmonthly"
 
     },
   ],
@@ -53,9 +53,9 @@ const tabContents = [
         { one: "Coworker messaging", two: "System"},
         { one: "Secure Payments & Payouts", two: ""},
       ],
-      buttonLabel: "GET BASIC",
+      buttonLabel: "getbasic",
       routeName: "PayoutPreferencesPage",
-      info: "Billed monthly"
+      info: "billedmonthly"
 
     },
     {
@@ -70,9 +70,9 @@ const tabContents = [
         { one: "Marketing ", two: "Reach"},
         { one: "VIP ", two: "Service & Support"},
       ],
-      buttonLabel: "GET PREMIUM",
+      buttonLabel: "getpremium",
       routeName: "PayoutPreferencesPage",
-      info: "Billed monthly"
+      info: "billedmonthly"
 
     },
   ],
@@ -174,11 +174,15 @@ const TabContent = props => {
       </div>
       <div className={css.buttonBoard}>
         <NamedLink name={routeName}>
-          <PrimaryButton>{buttonLabel}</PrimaryButton>
+          <PrimaryButton>
+          {intl.formatMessage({ id: `SubscriptionPage.${buttonLabel}` })}
+          </PrimaryButton>
         </NamedLink>
       </div>
       <div className={css.infoBoard}>
-      <span className={css.info}>{info}</span>
+      <span className={css.info}>
+      {intl.formatMessage({ id: `SubscriptionPage.${info}` })}
+      </span>
       </div>
     </div>
   )

@@ -1039,5 +1039,9 @@
   "SectionLocations.singleDesk": "Escritorio individual",
   "SectionLocations.flexDesk": "Escritorio Flex",
 
-  "SubscriptionPage.month":"mes"
+  "SubscriptionPage.month":"mes",
+
+  "SubscriptionPage.getbasic":"OBTENER BÁSICO",
+  "SubscriptionPage.getpremium":"HAZTE PREMIUM",
+  "SubscriptionPage.billedmonthly":"Facturado mensualmente"
 }

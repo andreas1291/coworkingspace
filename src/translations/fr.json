@@ -1045,5 +1045,9 @@
   "SectionLocations.singleDesk": "Bureau simple",
   "SectionLocations.flexDesk": "Bureau flexible",
 
-  "SubscriptionPage.month":"mois"
+  "SubscriptionPage.month":"mois",
+
+  "SubscriptionPage.getbasic":"GET BASIC",
+  "SubscriptionPage.getpremium":"OBTENEZ PREMIUM",
+  "SubscriptionPage.billedmonthly":"Facturé mensuellement"
 }

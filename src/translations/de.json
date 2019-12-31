@@ -1048,5 +1048,9 @@
   "SectionLocations.singleDesk": "Einzelner Schreibtisch",
   "SectionLocations.flexDesk": "Flex Desk",
 
-  "SubscriptionPage.month":"Monat"
+  "SubscriptionPage.month":"Monat",
+
+  "SubscriptionPage.getbasic":"GRUNDLAGEN ERHALTEN",
+  "SubscriptionPage.getpremium":"PREMIUM BEKOMMEN",
+  "SubscriptionPage.billedmonthly":"Monatlich abgerechnet"
 }

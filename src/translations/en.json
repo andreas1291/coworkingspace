@@ -1050,7 +1050,10 @@
   "SectionLocations.london": "London",
   "SectionLocations.meetingRoom": "Meeting Room",
   "SectionLocations.singleDesk": "Single Desk",
-  "SectionLocations.flexDesk": "Flex Desk"
+  "SectionLocations.flexDesk": "Flex Desk",
 
+  "SubscriptionPage.getbasic":"GET BASIC",
+  "SubscriptionPage.getpremium":"GET PREMIUM",
+  "SubscriptionPage.billedmonthly":"Billed Monthly"
 
 }
