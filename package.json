@@ -118,7 +118,6 @@
     "test": "NODE_ICU_DATA=node_modules/full-icu sharetribe-scripts test",
     "test-ci": "sharetribe-scripts test --runInBand",
     "eject": "sharetribe-scripts eject",
-
     "start": "cross-env NODE_ENV=development node server/index.js",
     "dev-server": "export NODE_ENV=development PORT=4000 REACT_APP_CANONICAL_ROOT_URL=http://localhost:4000&&yarn run build&&nodemon --watch server server/index.js",
     "heroku-postbuild": "yarn run build",
