@@ -328,7 +328,7 @@
   "KeywordFilterPlainForm.labelSelected": "Keyword",
   "KeywordFilterPlainForm.placeholder": "Enter a keyword…",
   "LandingPage.schemaDescription": "Book a coworkingspace using Coworkertime or earn some income by sharing your coworkingspace",
-  "LandingPage.schemaTitle": "Book a coworkingspace everywhere | {siteTitle}",
+  "LandingPage.schemaTitle": <H1>"Book a coworkingspace everywhere | {siteTitle}"<H1>,
   "LayoutWrapperAccountSettingsSideNav.contactDetailsTabTitle": "Contact details",
   "LayoutWrapperAccountSettingsSideNav.passwordTabTitle": "Password",
   "LayoutWrapperAccountSettingsSideNav.paymentsTabTitle": "Payout details",
