@@ -1,5 +1,6 @@
 import React from 'react';
 import { StaticPage, TopbarContainer } from '../../containers';
+import { injectIntl, intlShape, FormattedMessage } from '../../util/reactIntl';
 import {
   LayoutSingleColumn,
   LayoutWrapperTopbar,
@@ -185,19 +186,25 @@ const faq = [
 
 
 const Accordian = props => {
-  const { id, inputId, labelId, title, content, ul } = props
+  const { id, inputId, labelId, title, content, ul, accordianIndex } = props
   const { title: subTitle, content: subContent } = ul !== undefined?ul:{}
   return (
     <div id={id} className={css.wrapCollabsible}>
       <input id={inputId} className={css.toggle} type="checkbox"  />
       <label for={labelId} className={css.lblToggle}>
-        <span className={css.collapsibleTitle}>{title}</span>
+        <span className={css.collapsibleTitle}>
+          {intl.formatMessage({ id: `FaqPage.panel${accordianIndex+1}.title` })}
+        </span>
       </label>
       <div className={css.collapsibleContent}>
         <div className={css.contentInner}>
           {
             content !== undefined?
-              content.map(item => (<p>{item}</p>))
+              content.map((item, index) => (
+                <p>
+                  {intl.formatMessage({ id: `FaqPage.panel${accordianIndex+1}.content.text${index+1}` })}
+                </p>
+              ))
               :null
           }
           {
@@ -207,7 +214,11 @@ const Accordian = props => {
                   <h3>{subTitle}</h3>
                   <ul>
                     {
-                      subContent.map(item => (<li>{item}</li>))
+                      subContent.map(item => (
+                        <li>
+                          {intl.formatMessage({ id: `FaqPage.panel${accordianIndex+1}.ul.text${index+1}` })}
+                        </li>
+                      ))
                     }
                   </ul>
                 </React.Fragment>
@@ -249,9 +260,9 @@ const FaqPage = () => {
                     <div className={css.contentWrapper}>
                       <div className={css.contentMain}>
                         {
-                          faq.map(faqItem => {
+                          faq.map((faqItem, index) => {
                             return (
-                              <Accordian {...faqItem} />
+                              <Accordian accordianIndex={index}  {...faqItem} />
                             )
                           })
                         }
@@ -270,4 +281,4 @@ const FaqPage = () => {
   );
 };
 
-export default FaqPage;
+export default injectIntl(FaqPage);

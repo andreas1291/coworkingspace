@@ -34,7 +34,7 @@
 
 .link {
   display: inline-block;
-  white-space: nowrap;
+  /* white-space: wrap; */
 
   /* Font */
   @apply --marketplaceTabNavFontStyles;
@@ -42,7 +42,7 @@
   color: var(--matterColor);
   padding-bottom: 10px;
   padding-top: 10px;
-
+  
   /* push tabs against bottom of tab bar */
   margin-top: auto;
 
