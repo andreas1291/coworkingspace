@@ -12,39 +12,7 @@ const optionLabel = (options, key) => {
 };
 
 class SelectSingleFilterPopup extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { isOpen: false };
-    this.onToggleActive = this.onToggleActive.bind(this);
-    this.selectOption = this.selectOption.bind(this);
-  }
-
-  onToggleActive(isOpen) {
-    this.setState({ isOpen: isOpen });
-  }
-
-  selectOption(urlParam, option) {
-    this.setState({ isOpen: false });
-    this.props.onSelect(urlParam, option);
-  }
-
-  render() {
-    const {
-      rootClassName,
-      className,
-      urlParam,
-      label,
-      options,
-      initialValue,
-      contentPlacementOffset,
-    } = this.props;
-
-    // resolve menu label text and class
-    const menuLabel = initialValue ? optionLabel(options, initialValue) : label;
-    const menuLabelClass = initialValue ? css.menuLabelSelected : css.menuLabel;
-
-    const classes = classNames(rootClassName || css.root, className);
+  constructos = classNames(rootClassName || css.root, className);
 
     return (
       <Menu

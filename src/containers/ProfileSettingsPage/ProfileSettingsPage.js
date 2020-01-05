@@ -14,61 +14,7 @@ import {
   LayoutWrapperMain,
   LayoutWrapperFooter,
   Footer,
-  NamedLink,
-} from '../../components';
-import { ProfileSettingsForm } from '../../forms';
-import { TopbarContainer } from '../../containers';
-
-import { updateProfile, uploadImage } from './ProfileSettingsPage.duck';
-import css from './ProfileSettingsPage.css';
-
-const onImageUploadHandler = (values, fn) => {
-  const { id, imageId, file } = values;
-  if (file) {
-    fn({ id, imageId, file });
-  }
-};
-
-export class ProfileSettingsPageComponent extends Component {
-  render() {
-    const {
-      currentUser,
-      image,
-      onImageUpload,
-      onUpdateProfile,
-      scrollingDisabled,
-      updateInProgress,
-      updateProfileError,
-      uploadImageError,
-      uploadInProgress,
-      intl,
-    } = this.props;
-
-    const handleSubmit = values => {
-      const { firstName, lastName, bio: rawBio } = values;
-
-      // Ensure that the optional bio is a string
-      const bio = rawBio || '';
-
-      const profile = {
-        firstName: firstName.trim(),
-        lastName: lastName.trim(),
-        bio,
-      };
-      const uploadedImage = this.props.image;
-
-      // Update profileImage only if file system has been accessed
-      const updatedValues =
-        uploadedImage && uploadedImage.imageId && uploadedImage.file
-          ? { ...profile, profileImageId: uploadedImage.imageId }
-          : profile;
-
-      onUpdateProfile(updatedValues);
-    };
-
-    const user = ensureCurrentUser(currentUser);
-    const { firstName, lastName, bio } = user.attributes.profile;
-    const profileImageId = user.profileImage ? user.profileImage.id : null;
+ 
     const profileImage = image || { imageId: profileImageId };
 
     const profileSettingsForm = user.id ? (

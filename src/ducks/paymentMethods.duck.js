@@ -10,49 +10,7 @@ export const CREATE_STRIPE_CUSTOMER_REQUEST = 'app/paymentMethods/CREATE_STRIPE_
 export const CREATE_STRIPE_CUSTOMER_SUCCESS = 'app/paymentMethods/CREATE_STRIPE_CUSTOMER_SUCCESS';
 export const CREATE_STRIPE_CUSTOMER_ERROR = 'app/paymentMethods/CREATE_STRIPE_CUSTOMER_ERROR';
 
-export const ADD_PAYMENT_METHOD_REQUEST = 'app/paymentMethods/ADD_PAYMENT_METHOD_REQUEST';
-export const ADD_PAYMENT_METHOD_SUCCESS = 'app/paymentMethods/ADD_PAYMENT_METHOD_SUCCESS';
-export const ADD_PAYMENT_METHOD_ERROR = 'app/paymentMethods/ADD_PAYMENT_METHOD_ERROR';
-
-export const DELETE_PAYMENT_METHOD_REQUEST = 'app/paymentMethods/DELETE_PAYMENT_METHOD_REQUEST';
-export const DELETE_PAYMENT_METHOD_SUCCESS = 'app/paymentMethods/DELETE_PAYMENT_METHOD_SUCCESS';
-export const DELETE_PAYMENT_METHOD_ERROR = 'app/paymentMethods/DELETE_PAYMENT_METHOD_ERROR';
-
-// ================ Reducer ================ //
-
-const initialState = {
-  addPaymentMethodInProgress: null,
-  addPaymentMethodError: null,
-  deletePaymentMethodInProgress: null,
-  deletePaymentMethodError: null,
-  createStripeCustomerInProgress: null,
-  createStripeCustomerError: null,
-  stripeCustomer: null,
-};
-
-export default function payoutMethodsPageReducer(state = initialState, action = {}) {
-  const { type, payload } = action;
-  switch (type) {
-    case SET_INITIAL_VALUES:
-      return { ...initialState, ...payload };
-    case CREATE_STRIPE_CUSTOMER_REQUEST:
-      return { ...state, createStripeCustomerError: null, createStripeCustomerInProgress: true };
-    case CREATE_STRIPE_CUSTOMER_SUCCESS:
-      return {
-        ...state,
-        createStripeCustomerInProgress: false,
-        stripeCustomer: payload,
-      };
-    case CREATE_STRIPE_CUSTOMER_ERROR:
-      console.error(payload);
-      return {
-        ...state,
-        createStripeCustomerError: payload,
-        createStripeCustomerInProgress: false,
-      };
-    case ADD_PAYMENT_METHOD_REQUEST:
-      return { ...state, addPaymentMethodError: null, addPaymentMethodInProgress: true };
-    case ADD_PAYMENT_METHOD_SUCCESS:
+export const ADD_UCCESS:
       return {
         ...state,
         addPaymentMethodInProgress: false,

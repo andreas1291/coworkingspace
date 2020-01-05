@@ -30,47 +30,7 @@ export const stripeSupportedCountries = [
       accountNumber: true,
     },
   },
-  {
-    // Austria
-    code: 'AT',
-    currency: 'EUR',
-    addressConfig: {
-      addressLine: true,
-      city: true,
-      postalCode: true,
-    },
-    accountConfig: {
-      iban: true,
-    },
-    companyConfig: {
-      personalAddress: true,
-      owners: true,
-    },
-  },
-  {
-    // Belgium
-    code: 'BE',
-    currency: 'EUR',
-    addressConfig: {
-      addressLine: true,
-      city: true,
-      postalCode: true,
-    },
-    accountConfig: {
-      iban: true,
-    },
-    companyConfig: {
-      personalAddress: true,
-      owners: true,
-    },
-  },
-  {
-    // Canada
-    code: 'CA',
-    currency: 'CAD',
-    addressConfig: {
-      addressLine: true,
-      city: true,
+ 
       postalCode: true,
       province: true,
     },
