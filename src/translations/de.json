@@ -1052,65 +1052,9 @@
 
   "SubscriptionPage.getbasic":"GRUNDLAGEN ERHALTEN",
   "SubscriptionPage.getpremium":"PREMIUM BEKOMMEN",
-  "SubscriptionPage.billedmonthly":"Monatlich abgerechnet",
+  "SubscriptionPage.billedmonthly":"Monatlich abgerechnet"
 
-  "FaqPage.panel1.title":"1. What is Coworkertime",
-  "FaqPage.panel1.content.text1":"Coworkertime is a online community to book coworkingspaces. Our mission is to help Coworkingspaces around the world to increase her reach. Also we are dedicated to create an added value for Coworker and coworkingspace owner. Its worldwide the easiest way to find and book coworkingspaces.",
-
-  "FaqPage.panel2.title":"2. How does Coworkertime work?",
-  "FaqPage.panel2.content.text1":"Coworkertime is a marketplace to book some of the best coworkingspaces worldwide. We connect coworker with beautiful workingspaces everywhere.",
-  "FaqPage.panel2.content.text2":"Coworker can search coworkingspaces, request to book and book and pay through our platform.",
-
-  "FaqPage.panel3.title":"3. What does Coworkertime do?",
-  "FaqPage.panel3.content.text1":"Our marketplace is a platform that allows anyone to create an account in minutes, discover coworkingspaces, request a time, book, and pay without any hassles. For coworkingspaces, we make it easy to add your space, manage booking requests, message directly with coworkers, and accept payments.",
-
-  "FaqPage.panel4.title":"4. Why should I use Coworkertime?",
-  "FaqPage.panel4.content.text1":"If you are a coworkingspace It’s very simple and easy. In that we are a platform for you to share your Coworkingspace with coworker around the word, increase your bookings and revenue, and easily manage your bookings and payments.",
-
-  "FaqPage.panel5.title":"5. Do I need to create an account?",
-  "FaqPage.panel5.content.text1":"You can browse and explore Coworkertime without an account. You need an account to message a coworkingspace, to book and pay or request for a Coworkertime. Also you need an account to publish a new coworkingspace.",
-
-  "FaqPage.panel6.title":"6. Is it free to list my coworkingspace?",
-  "FaqPage.panel6.content.text1":"To list your coworkingspae you need to be part of the basic plan, which is about 20$ / month.",
-
-  "FaqPage.panel7.title":"7. What countries do you support?",
-  "FaqPage.panel7.content.text1":"We are an online marketplace for coworkingspaces which is open worldwide. We are a company located in Switzerland.",
- 
-  "FaqPage.panel8.title":"8. How do I add my coworkingspace?",
-  "FaqPage.panel8.content.text1":"Adding your coworkingspace is easy and only takes a few minutes. After created an account you can select a subscription. We do require a monthly subscription to list have a coworkingspace listing. After you select a subscription, simply click the “Add your coworkingspace” at the top right. Please note that all listings are subject to review by our team to ensure the safety of our community. Once you submit your listing for review, we will approve it within 24 hours. ",
-
-  "FaqPage.panel9.title":"9. How much is it to add my coworkingspace?",
-  "FaqPage.panel9.content.text1":"We charge a monthly fee which starts at 20$/month. ",
-
-  "FaqPage.panel10.title":"10. Do you charge a transaction fee for bookings?",
-  "FaqPage.panel10.content.text1":"We charge a transaction fee of 10% for all bookings completed on Coworkertime. This fee is automatically deducted from your booking total once you accept the request.",
-
-  "FaqPage.panel11.title":"11. How can I add multiple rooms that I have at my studio?",
-  "FaqPage.panel11.content.text1":"We would love for you to add multiple rooms, coworkingspaces, or locations to Coworkertime! This has been a common request in the past and why we made our premium subscription package. With this subscription, we can also help you get started adding your listings and provide you with more support, marketing reach, and also typically booking requests. You must have a premium subscription to have multiple listings.",
-
-  "FaqPage.panel12.title":"12. How can I modify a booking request?",
-  "FaqPage.panel12.content.text1":"Once a booking request is sent, the dates, amount, and details of the booking request cannot be modified.",
-
-  "FaqPage.panel13.title":"13. When is a booking confirmed?",
-  "FaqPage.panel13.content.text1":"A booking is confirmed once indicated as completed by the coorkingspace listing owner.",
-
-  "FaqPage.panel14.title":"14. Do I have to communicate on Studiotime?",
-  "FaqPage.panel14.content.text1":"Yes, we ask that you never take communication outside of our platform messaging and never give your contact information prior to entering a Booking Agreement.",
-
-  "FaqPage.panel15.title":"15. Do I need an insurance for my coworkingspace?",
-  "FaqPage.panel15.content.text1":"Yes, you should have an insurance policy in place for your coworkingspace prior to listing it on Coworkertime.",
-
-  "FaqPage.panel16.title":"16. Does Coworkertime offer an insurance?",
-  "FaqPage.panel16.content.text1":"No, Coworkertime does not offer any insurance for bookings and equipment or inventories. Every provider is self-responsible to have an insurance for their coworkingspaces.",
-
-  "FaqPage.panel17.title":"17. Can we require coworker to have their own insurance in order to book my coworkingspace?",
-  "FaqPage.panel17.content.text1":"Yes, you can require that coworkers have their own insurance policy in place for them to book your coworkingspace. In the event that you require this, please mention this in your description, notify all booking requests of this requirement, and also receive proof of insurance to verify this prior to accepting a booking.",
-
-  "FaqPage.panel18.title":"18. How do I create an account?",
-  "FaqPage.panel18.ul.title":"You can create a user account in minutes doing the following:",
-  "FaqPage.panel18.ul.text1":"1. Click “Log in” at the top right",
-  "FaqPage.panel18.ul.text2":"2. Enter your email address and create a secure password",
-  "FaqPage.panel18.ul.text3":"3. Please check the email address you entered and confirm you email"
+  
  
 
 }

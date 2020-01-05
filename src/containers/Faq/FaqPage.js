@@ -186,7 +186,7 @@ const faq = [
 
 
 const Accordian = props => {
-  const { id, inputId, labelId, title, content, ul, accordianIndex } = props
+  const { id, inputId, labelId, title, content, ul, accordianIndex, intl } = props
   const { title: subTitle, content: subContent } = ul !== undefined?ul:{}
   return (
     <div id={id} className={css.wrapCollabsible}>
@@ -214,7 +214,7 @@ const Accordian = props => {
                   <h3>{subTitle}</h3>
                   <ul>
                     {
-                      subContent.map(item => (
+                      subContent.map((item, index) => (
                         <li>
                           {intl.formatMessage({ id: `FaqPage.panel${accordianIndex+1}.ul.text${index+1}` })}
                         </li>
@@ -230,7 +230,7 @@ const Accordian = props => {
     </div>
   )
 }
-const FaqPage = () => {
+const FaqPage = ({intl}) => {
 
 
   // prettier-ignore
@@ -252,8 +252,12 @@ const FaqPage = () => {
             <div className={css.sectionContent}>
               <div className={css.pageInfo}>
                 <div>
-                  <h1 className={css.title}>Have questions? We're here to help!</h1>
-                  <h2 className={css.subTitle}>General Questions</h2>
+                  <h1 className={css.title}>
+                  {intl.formatMessage({ id: `FaqPage.title` })}
+                  </h1>
+                  <h2 className={css.subTitle}>
+                  {intl.formatMessage({ id: `FaqPage.subTitle` })}
+                  </h2>
                 </div>
                 <div className={css.faqRow}>
                   <div className={css.rightContent}>
@@ -262,7 +266,7 @@ const FaqPage = () => {
                         {
                           faq.map((faqItem, index) => {
                             return (
-                              <Accordian accordianIndex={index}  {...faqItem} />
+                              <Accordian accordianIndex={index} intl={intl}  {...faqItem} />
                             )
                           })
                         }
