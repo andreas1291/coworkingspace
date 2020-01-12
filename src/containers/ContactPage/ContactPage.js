@@ -18,7 +18,18 @@ const ContactPage = () => {
   // const siteTwitterPage = twitterPageURL(siteTwitterHandle);
   const initialCenter = {lat:45.475420, lng:9.184960}
   // prettier-ignore
-  
+  return (
+    <StaticPage
+      title="Contact | Coworkingspace"
+      schema={{
+        '@context': 'http://schema.org',
+        '@type': 'ContactPage',
+        description: 'Contact Us',
+        name: 'Contact Page',
+      }}
+    >
+      <LayoutSingleColumn>
+        <LayoutWrapperTopbar>
           <TopbarContainer />
         </LayoutWrapperTopbar>
 

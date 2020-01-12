@@ -55,7 +55,50 @@ const routeConfiguration = (pathname = "") => {
   const routes = [
     {
       path: '/',
-  
+      name: 'LandingPage',
+      component: props => <LandingPage {...props} />,
+    },
+    {
+      path: '/about',
+      name: 'AboutPage',
+      component: AboutPage,
+    },
+    {
+      path: '/s',
+      name: 'SearchPage',
+      component: props => <SearchPage {...props} />,
+      loadData: SearchPage.loadData,
+    },
+    {
+      path: '/s/filters',
+      name: 'SearchFiltersPage',
+      component: props => <SearchPage {...props} tab="filters" />,
+      loadData: SearchPage.loadData,
+    },
+    {
+      path: '/s/listings',
+      name: 'SearchListingsPage',
+      component: props => <SearchPage {...props} tab="listings" />,
+      loadData: SearchPage.loadData,
+    },
+    {
+      path: '/s/map',
+      name: 'SearchMapPage',
+      component: props => <SearchPage {...props} tab="map" />,
+      loadData: SearchPage.loadData,
+    },
+    {
+      path: '/l',
+      name: 'ListingBasePage',
+      component: RedirectToLandingPage,
+    },
+    {
+      path: '/l/:slug/:id',
+      name: 'ListingPage',
+      component: props => <ListingPage {...props} />,
+      loadData: ListingPage.loadData,
+    },
+    {
       path: '/l/:slug/:id/checkout',
       name: 'CheckoutPage',
       auth: true,

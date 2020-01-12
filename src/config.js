@@ -19,6 +19,47 @@ const i18n = {
   firstDayOfWeek: 0,
 };
 
+// Should search results be ordered by distance to origin.
+// NOTE: If this is set to true add parameter 'origin' to every location in default-location-searches.js
+// Without the 'origin' parameter, search will not work correctly
+// NOTE: Keyword search and ordering search results by distance can't be used at the same time. You can turn keyword
+// search off by changing the keywordFilterConfig parameter active to false in marketplace-custom-config.js
+const sortSearchByDistance = false;
+
+// API supports custom processes to be used in booking process.
+// We need to specify it when we are initiating a new order
+// (or fetching price information by calling 'initiateSpeculative' endpoint).
+//
+// In a way, 'processAlias' defines which transaction process (or processes)
+// this particular web application is able to handle.
+const bookingProcessAlias = 'preauth-with-nightly-booking/release-1';
+
+// The transaction line item code for the main unit type in bookings.
+//
+// Possible values: ['line-item/night', 'line-item/day', 'line-item/units';]
+//
+// Note: translations will use different translation keys for night, day or unit
+// depending on the value chosen.
+const bookingUnitType = 'line-item/night';
+
+// Should the application fetch available time slots (currently defined as
+// start and end dates) to be shown on listing page.
+const enableAvailability = process.env.REACT_APP_AVAILABILITY_ENABLED === 'true';
+
+// A maximum number of days forwards during which a booking can be made.
+// This is limited due to Stripe holding funds up to 90 days from the
+// moment they are charged. Also note that available time slots can only
+// be fetched for 180 days in the future.
+const dayCountAvailableForBooking = 90;
+
+// To pass environment variables to the client app in the build
+// script, react-scripts (and the sharetribe-scripts fork of
+// react-scripts) require using the REACT_APP_ prefix to avoid
+// exposing server secrets to the client side.
+const sdkClientId = process.env.REACT_APP_SHARETRIBE_SDK_CLIENT_ID;
+const sdkBaseUrl = process.env.REACT_APP_SHARETRIBE_SDK_BASE_URL;
+const sdkTransitVerbose = process.env.REACT_APP_SHARETRIBE_SDK_TRANSIT_VERBOSE === 'true';
+
 const currency = process.env.REACT_APP_SHARETRIBE_MARKETPLACE_CURRENCY;
 
 // Currency formatting options.

@@ -16,7 +16,24 @@ const PrivacyPolicy = props => {
   ];
   // prettier-ignore
   return (
-    act.Fragment>
+    <div className={classes}>
+      <p className={css.lastUpdated}>
+        {intl.formatMessage({ id: `PrivacyPolicyPage.postDate` })}
+      </p>
+
+      <p>
+      {intl.formatMessage({ id: `PrivacyPolicyPage.description` })}
+      </p>
+
+      {
+        indexAry.map((subItem, index) => (
+          <React.Fragment>
+            <h2 style={{ fontStyle: "bolder" }}>
+              <FormattedMessage id={`PrivacyPolicyPage.panel${index+1}.heading`} />
+            </h2>
+            {
+              subItem.map((ul, subIndex) => (
+                  <React.Fragment>
                     <h2> { intl.formatMessage({ id: `PrivacyPolicyPage.panel${index+1}.option${subIndex+1}.heading` }) } </h2>
                     <p>
                     { intl.formatMessage({ id: `PrivacyPolicyPage.panel${index+1}.option${subIndex+1}.description` }) }

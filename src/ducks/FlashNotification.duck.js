@@ -14,6 +14,33 @@ export const REMOVE_FLASH_NOTIFICATION = 'app/FlashNotification/REMOVE_NOTIFICAT
 
 const initialState = [];
 
+// Reducer
+export default (state = initialState, action) => {
+  const { type, payload } = action;
+  switch (type) {
+    case ADD_FLASH_NOTIFICATION:
+      if (!find(state, n => n.content === payload.content && !n.isRead)) {
+        return state.concat([
+          { id: payload.id, type: payload.type, content: payload.content, isRead: false },
+        ]);
+      }
+      return state;
+
+    case REMOVE_FLASH_NOTIFICATION:
+      return state.map(findIndex(state, msg => msg.id === payload.id), msg =>
+        msg.set('isRead', true)
+      );
+
+    default:
+      return state;
+  }
+};
+
+// Action Creators
+let nextMessageId = 1;
+
+export const addFlashNotification = (type, content) => {
+  const id = nextMessageId;
   nextMessageId += 1;
   return {
     type: ADD_FLASH_NOTIFICATION,

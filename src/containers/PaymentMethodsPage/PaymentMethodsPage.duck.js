@@ -33,7 +33,32 @@ export default function payoutMethodsPageReducer(state = initialState, action = 
         setupIntentInProgress: false,
         setupIntentError: null,
         setupIntent: payload,
-      
+      };
+    case SETUP_INTENT_ERROR:
+      console.error(payload); // eslint-disable-line no-console
+      return { ...state, setupIntentInProgress: false, setupIntentError: null };
+    case STRIPE_CUSTOMER_REQUEST:
+      return { ...state, stripeCustomerFetched: false };
+    case STRIPE_CUSTOMER_SUCCESS:
+      return { ...state, stripeCustomerFetched: true };
+    case STRIPE_CUSTOMER_ERROR:
+      console.error(payload); // eslint-disable-line no-console
+      return { ...state, stripeCustomerFetchError: payload };
+    default:
+      return state;
+  }
+}
+
+// ================ Action creators ================ //
+
+export const setupIntentRequest = () => ({ type: SETUP_INTENT_REQUEST });
+export const setupIntentSuccess = () => ({ type: SETUP_INTENT_SUCCESS });
+export const setupIntentError = e => ({
+  type: SETUP_INTENT_ERROR,
+  error: true,
+  payload: e,
+});
+
 export const stripeCustomerRequest = () => ({ type: STRIPE_CUSTOMER_REQUEST });
 export const stripeCustomerSuccess = () => ({ type: STRIPE_CUSTOMER_SUCCESS });
 export const stripeCustomerError = e => ({
